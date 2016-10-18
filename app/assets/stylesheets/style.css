@@ -227,6 +227,14 @@ blockquote p {
   border-color: #16A085;
   outline: none;
 }
+ .navbar-brand {
+     padding: 0px; /* firefox bug fix */
+ }
+ /*.navbar-brand {*/
+     /*background: image_url('logo.png') no-repeat;*/
+     /*background: image_url('hipster-stuff.jpg') no-repeat;*/
+     /*width: 200px;*/
+ /*}*/
 
 .dropdown-menu{
   background-color: #16A085;
