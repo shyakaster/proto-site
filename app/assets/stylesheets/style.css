@@ -596,6 +596,7 @@ div.list-posts ul li a:hover{
 
 .btn-lg {
   padding: 10px 35px;
+  align-self: center;
 }
 
 .btn-primary {
