@@ -58,7 +58,8 @@
           <h2>Car hire services</h2>
           <div class="line-subtitle"></div>
           <p>Africarlogistics offers car hire services for town and upcountry travels.We have the best cars and professional drivers.<br/><br/>
-              <a href="#" class="btn btn-lg btn-danger">SEE MORE</a>
+             <%= link_to "SEE MORE", services_path, class: "btn btn-danger btn-lg"%>
+<!--              <a href="#" class="btn btn-lg btn-danger">SEE MORE</a>-->
           </p>
             
         </div>
@@ -70,10 +71,11 @@
         </div>
 
         <div class="block-body">
-          <h2>Intenational travel and Air tickets</h2>
+          <h2>International travel and Air tickets</h2>
           <div class="line-subtitle"></div>
           <p>We offer international holiday packages and Air tickets. Read more for details of what we have to offer.<br/><br/>
-           <a href="#" class=" btn btn-lg btn-success">SEE MORE</a>  
+           <%= link_to "SEE MORE", services_path, class: "btn btn-warning btn-lg"%>
+<!--           <a href="#" class=" btn btn-lg btn-success">SEE MORE</a>  -->
           </p>
             
         </div>
@@ -87,7 +89,8 @@
           <h2>Customize your holiday with us</h2>
           <div class="line-subtitle"></div>
           <p>Let us know how you want to experience your holiday and we shall make the necessary arrangements.<br/><br/>
-          <a href="#" class="btn btn-lg btn-warning">SEE MORE</a>    
+           <%= link_to "SEE MORE", services_path, class: "btn btn-success btn-lg"%>
+<!--          <a href="#" class="btn btn-lg btn-warning">SEE MORE</a>    -->
          </p>
             
         </div>
@@ -107,7 +110,8 @@
         <h2>We can make your dream holiday a success!</h2>
       </div>
       <div class="col-md-3 col-sm-4">
-        <a href="#" class="btn btn-danger btn-lg">Contact us</a>
+        <%= link_to "Contact us", contact_index_path, class: "btn btn-danger btn-lg"%>
+<!--        <a href="#" class="btn btn-danger btn-lg">Contact us</a>-->
       </div>
     </div><!-- /.row -->
 
@@ -124,7 +128,8 @@
         <h2 class="section-title">Recent tours</h2>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-6">
-        <a href="portfolio-item.html" class="link-portfolio">
+<!--       <%= link_to "", services_path, class:"link-portfolio"%>-->
+        <a href="#" class="link-portfolio">
           <div class="overlay-portfolio">
             <h3>Banzhow Template</h3>
             <small class="text-muted">
