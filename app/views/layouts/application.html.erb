@@ -9,42 +9,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <title>Africarlogistics</title>
-
-    <!--&lt;!&ndash; font-awesome &ndash;&gt;-->
-    <!--<link href="/font-awesome.min.css" rel="stylesheet">-->
-    <!--&lt;!&ndash;[if lt IE 9]>-->
-    <!--<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
-    <!--<![endif]&ndash;&gt;-->
-    <!--&lt;!&ndash;[if IE 7]>-->
-    <!--<link href="/font-awesome-ie7.css" rel="stylesheet">-->
-    <!--<![endif]&ndash;&gt;-->
-
-    <!--&lt;!&ndash; Bootstrap core CSS &ndash;&gt;-->
-    <!--<link href="/bootstrap.css" rel="stylesheet">-->
-
-    <!--&lt;!&ndash; custom CSS &ndash;&gt;-->
-    <!--<link href="/style.css" rel="stylesheet">-->
-    <!--&lt;!&ndash;[if lte IE 8]>-->
-    <!--<link href="/ie8.css" rel="stylesheet">-->
-    <!--<![endif]&ndash;&gt;-->
-    <!--&lt;!&ndash;[if lte IE 7]>-->
-    <!--<link href="/ie7.css" rel="stylesheet">-->
-    <!--<![endif]&ndash;&gt;-->
-
-    <!--&lt;!&ndash; JavaScript &ndash;&gt;-->
-    <!--<script type="text/javascript" src="/jquery-1.10.2.js"></script>-->
-    <!--<script type="text/javascript" src="/bootstrap.js"></script>-->
-    <!--<script type="text/javascript" src="/plugins.js"></script>-->
-    <!--&lt;!&ndash;[if lte IE 7]>-->
-    <!--<script type="text/javascript" src="/boxsizing/jquery.boxsizing.js"></script>-->
-    <!--<![endif]&ndash;&gt;-->
-    <!--<script type="text/javascript" src="/banzhow.js"></script>-->
   <title>ProtoSite</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+        <div class="alert alert-<%= name.to_s == 'notice' ? "success" : "danger"  %> alert-dismissable" >
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times; </button>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        </div>
+    <% end %>
+<% end %>
 
 <%= yield %>
 
