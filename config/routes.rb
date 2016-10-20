@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :portfolio, only: [:index, :show]
 
-  resources :contact, only: [:index]
+  resources :contacts, only: [:new ,:create]
   #this is a much better way of serving static pages through the static_pages controller's show action
   get 'static_pages/*page' => 'static_pages#show'
 

@@ -79,7 +79,6 @@ Rails.application.configure do
 
   #Devise set up
   # required for devise gem but remember to change localhost:3000 to the live url
-  # required for devise gem but remember to change localhost:3000 to the live url
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'proto-demo.herokuapp.com',:protocol =>'https' }
+  config.action_mailer.default_url_options = { host: 'africarlogistics.tours',:protocol =>'https' }
 end

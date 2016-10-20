@@ -54,6 +54,38 @@
 <%= render 'layouts/navbar'%>
 
 <div id="map-canvas" class="carousel"></div>
+<div class="section">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>Contact</h3>
+        <p>Please send us a message and we shall get back to you as soon as possible</p>
+        <%= form_for @contact do |f|%>
+            <%= f.label :contacts_name%>
+            <%= f.text_field :contacts_name, required: true%>
+            <br>
+            <%= f.label :contacts_email%>
+            <%= f.text_field :contacts_email, required: true%>
+            <br>
+            <%= f.label :contacts_phone%>
+            <%= f.text_field :contacts_phone%>
+            <br>
+            <%= f.label :contacts_message%>
+            <%= f.text_area :contacts_message,as: :text%>
+            <br>
+            <div class="hidden">
+              <%= f.label :nickname%>
+              <%= f.text_field :nickname, hint: 'leave this blank'%>
+            </div>
+            <%= f.submit "Send Message", class:'btn btn-success btn-lg'%>
+        <%end%>
+      </div>
+
+      </div>
+    </div>
+ </div>
 
 <div class="section">
 
@@ -62,8 +94,7 @@
     <div class="row">
 
       <div class="col-sm-8">
-        <h3>Contact</h3>
-        <p>Please send us a message and we shall get back to you as soon as possible</p>
+
 
         <form role="form" method="POST" action="contact-form-submission.php">
           <div class="row">
