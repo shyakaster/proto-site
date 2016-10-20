@@ -54,92 +54,106 @@
 <%= render 'layouts/navbar'%>
 
 <div id="map-canvas" class="carousel"></div>
-<div class="section">
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-sm-8">
-        <h3>Contact</h3>
-        <p>Please send us a message and we shall get back to you as soon as possible</p>
-        <%= form_for @contact do |f|%>
-            <%= f.label :contacts_name%>
-            <%= f.text_field :contacts_name, required: true%>
-            <br>
-            <%= f.label :contacts_email%>
-            <%= f.text_field :contacts_email, required: true%>
-            <br>
-            <%= f.label :contacts_phone%>
-            <%= f.text_field :contacts_phone%>
-            <br>
-            <%= f.label :contacts_message%>
-            <%= f.text_area :contacts_message,as: :text%>
-            <br>
-            <div class="hidden">
-              <%= f.label :nickname%>
-              <%= f.text_field :nickname, hint: 'leave this blank'%>
-            </div>
-            <%= f.submit "Send Message", class:'btn btn-success btn-lg'%>
-        <%end%>
-      </div>
-
-      </div>
-    </div>
- </div>
 
 <div class="section">
-
   <div class="container">
-
-    <div class="row">
-
-      <div class="col-sm-8">
-
-
-        <form role="form" method="POST" action="contact-form-submission.php">
-          <div class="row">
-            <div class="form-group col-md-12">
-              <label for="input1">Name</label>
-              <input type="text" name="contact_name" class="form-control" id="input1">
-            </div>
-            <div class="form-group col-md-12">
-              <label for="input2">Email Address</label>
-              <input type="email" name="contact_email" class="form-control" id="input2">
-            </div>
-            <div class="form-group col-md-12">
-              <label for="input3">Phone Number</label>
-              <input type="phone" name="contact_phone" class="form-control" id="input3">
-            </div>
-            <div class="clearfix"></div>
-            <div class="form-group col-lg-12">
-              <label for="input4">Message</label>
-              <textarea name="contact_message" class="form-control" rows="6" id="input4"></textarea>
-            </div>
-            <div class="form-group col-lg-12">
-              <input type="hidden" name="save" value="contact">
-              <button type="submit" class="btn btn-primary pull-right">Submit</button>
-              <div class="clearfix"></div>
-            </div>
+        <div class="row">
+              <div class="col-sm-8">
+                <h3>Contact</h3>
+                <p>Please send us a message and we shall get back to you as soon as possible</p>
+                <form role="form">
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                        <%= form_for @contact do |f|%>
+                            <%= f.label :contacts_name%>
+                            <%= f.text_field :contacts_name,class:'form-control', required: true%>
+                            <br>
+                          </div>
+                          <div class="form-group col-md-12">
+                            <%= f.label :contacts_email%>
+                            <%= f.text_field :contacts_email,class:'form-control', required: true%>
+                            <br>
+                          </div>
+                          <div class="form-group col-md-12">
+                            <%= f.label :contacts_phone%>
+                            <%= f.text_field :contacts_phone, class:'form-control'%>
+                            <br>
+                            </div>
+                          <div class="form-group col-lg-12">
+                            <%= f.label :contacts_message%>
+                            <%= f.text_area :contacts_message,class:'form-control',as: :text%>
+                            <br>
+                            </div>
+                            <div class="hidden">
+                              <%= f.label :nickname%>
+                              <!--<div class="form-group col-md-12">-->
+                              <%= f.text_field :nickname,class:'form-control', hint: 'leave this blank'%>
+                            </div>
+                              <div class="form-group col-lg-12">
+                             <%= f.submit "Send Message", class:'btn btn-success btn-lg pull-right'%>
+                              </div>
+                        <%end%>
+                    </div>
+            </form>
+        </div>
+          <div class="col-sm-4">
+            <h3>Address</h3>
+            <h4>Africarlogistics</h4>
+            <p>
+              <i class="fa fa-map-marker"></i> 123 Nkurumah Road, Kampala.
+            </p>
+            <p><i class="fa fa-phone"></i> 0772441442</p>
+            <p><i class="fa fa-envelope"></i> <a href="mailto:info@banzhow.com">info@africarlogistics.tours</a></p>
+            <p><i class="fa fa-clock-o"></i> Monday - Saturday: 9:00 AM to 5:00 PM</p>
           </div>
-        </form>
-      </div>
+     </div>
+  </div>
+</div>
 
-      <div class="col-sm-4">
-        <h3>Address</h3>
-        <h4>Africarlogistics</h4>
-        <p>
-          <i class="fa fa-map-marker"></i> 123 Nkurumah Road, Kampala.
-        </p>
-        <p><i class="fa fa-phone"></i> 0772441442</p>
-        <p><i class="fa fa-envelope"></i> <a href="mailto:info@banzhow.com">info@africarlogistics.tours</a></p>
-        <p><i class="fa fa-clock-o"></i> Monday - Saturday: 9:00 AM to 5:00 PM</p>
-      </div>
+<!--<div class="section">-->
 
-    </div><!-- /.row -->
+  <!--<div class="container">-->
 
-  </div><!-- /.container -->
+    <!--<div class="row">-->
 
-</div><!-- /.section -->
+      <!--<div class="col-sm-8">-->
+
+
+        <!--<form role="form" method="POST" action="contact-form-submission.php">-->
+          <!--<div class="row">-->
+            <!--<div class="form-group col-md-12">-->
+              <!--<label for="input1">Name</label>-->
+              <!--<input type="text" name="contact_name" class="form-control" id="input1">-->
+            <!--</div>-->
+            <!--<div class="form-group col-md-12">-->
+              <!--<label for="input2">Email Address</label>-->
+              <!--<input type="email" name="contact_email" class="form-control" id="input2">-->
+            <!--</div>-->
+            <!--<div class="form-group col-md-12">-->
+              <!--<label for="input3">Phone Number</label>-->
+              <!--<input type="phone" name="contact_phone" class="form-control" id="input3">-->
+            <!--</div>-->
+            <!--<div class="clearfix"></div>-->
+            <!--<div class="form-group col-lg-12">-->
+              <!--<label for="input4">Message</label>-->
+              <!--<textarea name="contact_message" class="form-control" rows="6" id="input4"></textarea>-->
+            <!--</div>-->
+            <!--<div class="form-group col-lg-12">-->
+              <!--<input type="hidden" name="save" value="contact">-->
+              <!--<button type="submit" class="btn btn-primary pull-right">Submit</button>-->
+              <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</form>-->
+      <!--</div>-->
+
+
+
+    <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
+
+  <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
+
+<!--</div>&lt;!&ndash; /.section &ndash;&gt;-->
 
 
 <%= render 'layouts/footer'%>
