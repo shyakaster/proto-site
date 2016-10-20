@@ -12,3 +12,7 @@
 !/log/.keep
 /tmp
 /config/application.yml
+/africar.csr
+/africar.key
+/africarlogistics_tours.crt
+/africarlogistics_tours.ca-bundle
