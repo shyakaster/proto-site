@@ -1,2 +1,21 @@
-<h1>Contact#show</h1>
-<p>Find me in app/views/contact/show.html.erb</p>
+<%= render 'layouts/navbar'%>
+<section style="padding: 40px 0;">
+<div class="container">
+<hr>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h1 id="page_title">We are glad to hear from you !</h1>
+			<p class="lead">Thank you for your message. We shall get back to you asap!</p>
+		</div>
+	</div>
+<hr>
+	<div class="row">
+		<div class="col-md-4 pull-right">
+		<%= link_to "Back to home",  root_path, class:'btn btn-warning btn-lg'%>
+		</div>
+	</div>
+</div>
+</section>
+<%= render 'layouts/footer'%>
+<%= render 'layouts/rights'%>
+
