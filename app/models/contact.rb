@@ -6,7 +6,7 @@ class Contact < MailForm::Base
     attribute :nickname, :captcha => true
     def headers
         {
-        :subject => "Contact Form",
+        :subject => "Info from africarlogistics.com",
         :to => "sales@africarlogistics.tours",
         :from => %("#{contacts_name}" <#{contacts_email}>)
         }
