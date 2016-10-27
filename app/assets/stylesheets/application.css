@@ -12,7 +12,5 @@
  *
  *= require_tree .
  *= require_self
- *= require jquery-ui
- *= require font-awesome
  */
 /* User sign in and sign forms. */

@@ -17,12 +17,19 @@
       <div class="carousel-caption">
         <h2>sipi falls scenery</h2>
         <!--<a href="#" class="button">DOWNLOAD</a>-->
+        <%unless signed_in?%>
+        <%= link_to "Register to recieve offers", new_user_registration_path, class:'btn btn-lg btn-danger'%>
+        <%end%>
+        <!-- <a class="btn btn-lg btn-danger" href="#" role="button">Register to recieve offers &raquo;</a> -->
       </div>
     </div>
     <div class="item">
       <div class="fill" style="background-image:url('/assets/lion.jpg');"></div>
       <div class="carousel-caption">
         <h2>african lion</h2>
+        <%unless signed_in?%>
+         <%= link_to "Register to recieve offers", new_user_registration_path, class:'btn btn-lg btn-danger'%>
+         <%end%>
         <!--<a href="#" class="button">SEE MORE</a>-->
       </div>
     </div>
@@ -31,6 +38,10 @@
       <div class="carousel-caption">
         <h2>source of the nile river</h2>
         <!--<a href="#" class="button">DOWNLOAD</a>-->
+        <%unless signed_in?%>
+          <%= link_to "Register to recieve offers", new_user_registration_path, class:'btn btn-lg btn-danger'%>
+        <%end%>
+        
       </div>
     </div>
   </div>
